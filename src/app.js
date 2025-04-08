@@ -11,12 +11,9 @@ window.onload = function () {
   let obj = ['joelho', 'coração', 'tibia', 'fratura', 'infecção']
   let random = ['cirugia', 'doutor', 'enfermeiro', 'transplante', 'sangue'];
   const domainNames = [];
-  for (let adjIndex = 0; adjIndex < adj.length; adjIndex++) {
-    const domainAdj = adj[adjIndex];
-    for (let objIndex = 0; objIndex < obj.length; objIndex++) {
-      const domainObj = obj[objIndex];
-      for (let randomIndex = 0; randomIndex < random.length; randomIndex++) {
-        const domainRandom = random[randomIndex];
+  for (const domainAdj of adj) {
+    for (const domainObj of obj) {
+      for (const domainRandom of random) {
         const domainName = domainAdj + domainObj + domainRandom + '.com';
         domainNames.push(domainName);
       }
